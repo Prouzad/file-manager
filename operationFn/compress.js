@@ -16,7 +16,6 @@ export async function compressFn(dirname, text) {
   try {
     const pathToFile = join(dirname, originalFilePath);
     const pathFileArr = pathToFile.split(`\\`);
-    console.log(pathFileArr, "PATHTOFILE");
     const originalFileName = pathFileArr[pathFileArr.length - 1];
     if ((await checkFile(pathToFile, "file")) === false) {
       console.log("Operation failed: Wrong file name!");
